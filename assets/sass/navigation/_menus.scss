@@ -1,14 +1,27 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
+	text-align: center;
 	width: 100%;
+	background-color: #fff;
+	@media screen and (min-width: $tabwidth) {
+		clear: none;
+		width: auto;
+		
+
+	}
+	@media screen and (min-width: $deskwidth) {
+		text-align: left;
+	}
 
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		@media screen and (min-width: $tabwidth) {
+			display: flex;
+		}
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -28,10 +41,23 @@
 				&.focus > ul {
 					left: 100%;
 				}
+				@media screen and (min-width: $tabwidth) {
+		
+				}
+				@media screen and (min-width: $deskwidth) {
+					
+				}
 			}
+
 
 			a {
 				width: 200px;
+				@media screen and (min-width: $tabwidth) {
+		
+				}
+				@media screen and (min-width: $deskwidth) {
+					
+				}
 			}
 
 			:hover > a,
@@ -49,8 +75,28 @@
 		}
 	}
 	li {
-		float: left;
+		// float: left;
 		position: relative;
+		text-align: center;
+		display: inline-block;
+		hyphens: none;
+		padding: 0 ;
+		text-transform: uppercase;
+		font-family: $font-heading;
+		font-weight: 300;
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			border-left: 1px solid #000;
+			line-height: 3;
+			width: auto;
+			// padding: 0 20px;
+			&:first-of-type {
+				border: 0;
+			}
+		}
+		@media screen and (min-width: $deskwidth) {
+			// padding: 0 30px;
+		}
 
 		&:hover > a,
 		&.focus > a {
@@ -58,7 +104,21 @@
 	}
 	a {
 		display: block;
+		// align-items: center;
 		text-decoration: none;
+		padding: 10px 0px;
+		color: #fff;
+		@include transition(all ease .4s);
+		@media screen and (min-width: $tabwidth) {
+			padding: 0% 20px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			padding: 0% 30px;
+		}
+		&:hover {
+			background-color: rgba(#fff, 1);
+			color: $color-black;
+		}
 	}
 
 	.current_page_item > a,
@@ -85,13 +145,13 @@
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		// display: block;
 	}
 }
 button.menu-toggle {
 	border: 0px;
 	text-shadow: none;
-	// background-color: $color-green;
+	background-color: #ccc;
 	color: #fff;
 	box-shadow: none;
 	width: auto;

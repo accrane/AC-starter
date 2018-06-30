@@ -13,6 +13,17 @@
 	@media screen and (min-width: $deskwidth) {
 		text-align: left;
 	}
+	.menu {
+		@include transition(all ease 1s);
+		overflow: hidden;
+		display: block;
+	}
+	&.toggled .menu {
+		max-height: 1000px;
+	}
+	.menu {
+		max-height: 0;
+	}
 
 	ul {
 		display: none;
@@ -107,7 +118,7 @@
 		// align-items: center;
 		text-decoration: none;
 		padding: 10px 0px;
-		color: #fff;
+		color: #000;
 		@include transition(all ease .4s);
 		@media screen and (min-width: $tabwidth) {
 			padding: 0% 20px;

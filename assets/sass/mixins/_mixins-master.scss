@@ -22,3 +22,47 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+@mixin flexbox(){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+  }
+  @mixin flexbox-flex($first, $second, $third) {
+	-webkit-box-flex: $first $second $third;
+	-moz-box-flex: $first $second $third;
+	-webkit-flex: $first $second $third;
+	-ms-flex: $first $second $third;
+	flex: $first $second $third;
+  }
+  @mixin flexbox-wrap($value){
+	-webkit-flex-wrap: $value;
+	flex-wrap: $value;
+  }
+  @mixin flexbox-align-content($value){
+	-webkit-align-content: $value;
+	align-content: $value;
+  }
+  @mixin flexbox-align-items($value){
+	-webkit-align-items: $value;
+	align-items: $value;
+  }
+  @mixin flexbox-justify($value){
+	-webkit-justify-content: $value;
+	justify-content: $value;
+  }
+  @mixin flexbox-align-self($value){
+	-webkit-align-self: $value;
+	align-self: $value;
+  }
+  @mixin flexbox-direction($value){
+	-webkit-flex-direction: $value;
+	flex-direction: $value;
+  }
+  @mixin translatexy($value1,$value2){
+	-ms-transform: translateX($value1) translateY($value2);
+	-moz-transform: translateX($value1) translateY($value2);
+	-webkit-transform: translateX($value1) translateY($value2);
+	transform: translateX($value1) translateY($value2);
+  }

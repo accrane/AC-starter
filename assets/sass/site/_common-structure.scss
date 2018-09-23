@@ -62,13 +62,11 @@ div {
 /* Logo */
 .logo , h1.logo {
 	width: 300px;
-	height: 200px;
 	background-image: url(images/logo.png);	
 	margin: 10px auto;
 
 	@media screen and (min-width: $tabwidth) {
 		width: 300px;
-		height: 200px;
 		float: left;
 		margin: 0;
 	}
@@ -78,15 +76,16 @@ div {
 }
 .logo a, h1.logo a {
 	width: 300px;
-	height: 200px;
 	display: block;
-	text-indent: -9000px;
 
 	@media screen and (min-width: $tabwidth) {
 		width: 300px;
-		height: 200px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
+}
+.site-footer {
+	width: 100%;
+	clear: both;
 }

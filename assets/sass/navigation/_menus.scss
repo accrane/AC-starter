@@ -23,6 +23,9 @@
 	}
 	.menu {
 		max-height: 0;
+		@media screen and (min-width: $tabwidth) {
+			max-height: 1000px;
+		}
 	}
 
 	ul {
